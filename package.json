@@ -1,0 +1,37 @@
+{
+  "name": "neurovr-2.0",
+  "version": "2.0.0",
+  "description": "NeuroVR-2.0: An Interactive VR Model for Personal Safety Awareness",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "build": "npm run build --prefix client",
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build:client": "npm run build --prefix client",
+    "test:server": "npm test --prefix server",
+    "test:client": "npm test --prefix client",
+    "test": "npm run test:server && npm run test:client",
+    "seed": "npm run seed --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "neurovr",
+    "accessibility",
+    "threejs",
+    "webxr",
+    "safety-awareness",
+    "react",
+    "express"
+  ],
+  "author": "NeuroVR Team",
+  "license": "MIT"
+}
